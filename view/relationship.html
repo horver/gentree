@@ -1,0 +1,29 @@
+<div id="relationModal" class="modal modal-fixed-footer"></div>
+<script  id="relationmodal-template" type="text/x-handlebars-template">
+  <div class="modal-content">
+    <h4><i class="material-icons">group_add</i>Házasság hozzáadása</h4>
+    <form id="relationForm" class="col s12" method="post" data-toggle="validator">
+      <div class="row">
+        <div class="col s12">
+          <div class="input-field">
+            <input id="RelationHusband" name="relationHusband" type="text" placeholder="Férj" required>
+          </div>
+          <div class="input-field">
+            <input id="RelationWife" name="relationWife" type="text" placeholder="Feleség" required>
+          </div>
+          <div class="input-field col s6">
+            <input id="relationStart" type="date" class="datepicker" required>
+            <label for="relationStart">Házasság kezdete</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="relationEnd" type="date" class="datepicker" required>
+            <label for="relationEnd">Házasság vége</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button id="relationSubmit" type="submit" class="btn">Hozzáadás</button>
+  </div>
+</script>

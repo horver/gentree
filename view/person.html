@@ -1,0 +1,38 @@
+<div id="personPage" class="container page" data-route="person" style="display: none;"></div>
+<script  id="personpage-template" type="text/x-handlebars-template">
+  <div class="row">
+    <div class="col s12">
+      <div class="card light-green darken-1">
+        <div class="card-content white-text flow-text">
+          <span class="card-title"><h2><i class="material-icons medium">{{icon}}</i>{{person.name}}</h2></span>
+          <h5>Személyes információk</h5>
+          <p>{{person.born}} - {{person.death}}</p>
+          <p>Született: {{person.bornplace}}</p>
+          <p><i class="material-icons">location_city</i>Lakhely: {{person.place.city}} - {{person.place.street}} ( {{person.place.begin}} -)</p>
+          <p><i class="material-icons">location_city</i>Korábbi lakhely:<br>
+            {{#each person.pastPlaces as |pastPlace|}}
+            <span>{{pastPlace.city}} - {{pastPlace.street}} ( {{pastPlace.begin}} - {{pastPlace.end}} )</span><br>
+            {{/each}}
+          </p>
+          <p><i class="material-icons">work</i>Foglalkozás: {{person.job}}</p>
+          <h5><i class="material-icons">wc</i>Házaságok</h5>
+          {{#each person.relationships as |relationship|}}
+            <span>
+              <a href="#/person/{{relationship.otherId}}" class="white-text">{{relationship.otherName}}</a> ({{relationship.marrige}} - {{relationship.divorce}})
+              <a href="#/relationship-delete/{{relationship.id}}" class="red-text"><i class="material-icons">delete</i></a>
+            </span>
+            <br>
+          {{/each}}
+          <h5>Megjegyzések</h5>
+          {{person.comment}}
+        </div>
+        <div class="card-action white">
+          <a href="#/person-edit/{{person.id}}" class="btn">Módosítás</a>
+          {{#ifNot person.id}}
+            <a href="#/person-delete/{{person.id}}" class="btn red">Személy törlése</a>
+          {{/ifNot}}
+        </div>
+      </div>
+    </div>
+  </div>
+</script>

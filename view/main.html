@@ -1,0 +1,41 @@
+<div id="mainPage">
+  <ul id="userMenu" class="dropdown-content">
+    <li><a id="editUser"><i class="material-icons left">settings</i>Beállítások</a></li>
+    <li class="divider"></li>
+    <li><a href="index.php?exit"><i class="material-icons left">input</i>Kijelentkezés</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="index.php" class="brand-logo">Dzsentri</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#/persons"><i class="material-icons left">list</i>Személyek listázása</a></li>
+        <li><a href="#/tree"><i class="material-icons left">nature</i>Családfa megtekintése</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="userMenu"><span id="username"></span><i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+      <form>
+        <div class="input-field">
+          <input id="searchPerson" name="SearchPerson" type="search" class="nav-search" placeholder="Személy keresése...">
+          <label for="searchPerson"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="fixed-action-btn horizontal" style="top: 75px; right: 24px;">
+      <a class="btn-floating btn-large">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a href="#/person-edit" class="btn-floating red tooltipped" data-tooltip="Családtag hozzáadása"><i class="material-icons">person_add</i></a></li>
+        <li><a id="addRelation" class="btn-floating blue tooltipped" data-tooltip="Házasság hozzáadása"><i class="material-icons">group_add</i></a></li>
+        <li><a id="addPlace" class="btn-floating green tooltipped" data-tooltip="Lakhely hozzáadása"><i class="material-icons">location_city</i></a></li>
+      </ul>
+    </div>
+    <div class="page center-align" data-route="welcome" style="display: none;">
+       <p class="flow-text">Gentree (Dzsentri) - Generations tree <br> -egy családfa kezelő web app</p>
+       <p class="flow-text">Készült az Informatika 2 c. tárgy 20. házi feladata alapján.</p>
+       <p class="flow-text">Készítette: Horváth Tamás - CEE9ZD Laborvezető: Asztalos Márk labor helyszíne: IL205, időpont: páratlan péntek 10:15</p>
+    </div>
+  </div>
+</div>

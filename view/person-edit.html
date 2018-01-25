@@ -1,0 +1,68 @@
+<div id="personEditPage" class="container page" data-route="person-edit" style="display: none;"></div>
+<script  id="personEditpage-template" type="text/x-handlebars-template">
+  <h5><i class="material-icons">{{icon}}</i>{{title}}</h5>
+  <form id="personEditForm" class="col s12" method="post" onsubmit="return false;" data-toggle="validator">
+    <div class="row">
+      <div class="col s12">
+        <div class="col s2">
+          <select id="personEditPrename">
+            {{#select person.prename}}
+            <option value=""></option>
+            <option value="Dr.">Dr.</option>
+            <option value="Ifjabb">Ifjabb</option>
+            <option value="Prof.">Prof.</option>
+            <option value="Gróf">Gróf</option>
+            <option value="Báró">Báró</option>
+            {{/select}}
+          </select>
+        </div>
+        <div class="col s10">
+          <input id="personEditName" type="text" value="{{person.name}}" placeholder="Teljes név" required>
+        </div>
+        <div class="col s12">
+          <input name="personEditSex" value="0" type="radio" id="personEditMale" {{#ifCond person.sex 0}}checked{{/ifCond}}>
+          <label for="personEditMale">Férfi</label>
+          <input name="personEditSex" value="1" type="radio" id="personEditFemale" {{#ifCond person.sex 1}}checked{{/ifCond}}>
+          <label for="personEditFemale">Nő</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="personEditBorn" type="date" value="{{person.born}}" class="datepicker">
+          <label for="personEditBorn">Születési dátum</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="personEditDeath" type="date" value="{{person.death}}" class="datepicker">
+          <label for="personEditDeath">Halálozási dátum</label>
+        </div>
+        <div class="col s12">
+          <input id="personEditJob" type="text" value="{{person.job}}" placeholder="Foglalkozás">
+        </div>
+        <div class="input-field col s12">
+          Édesanya: <input id="personEditMother" name="personEditMother" type="text" placeholder="Édesanya">
+        </div>
+        <div class="input-field col s12">
+          Édesapa: <input id="personEditFather" name="personEditFather" type="text" placeholder="Édesapa">
+        </div>
+        <div class="input-field col s12">
+          Születésihely: <input id="personEditBornPlace" name="personEditBornPlace" type="text" placeholder="Születésihely">
+        </div>
+        <div class="input-field col s12">
+          Lakhely: <input id="personEditPlace" name="personEditPlace" type="text" placeholder="Lakhely">
+        </div>
+        <div id="personEditPastPlaceContainer" class="input-field col s12">
+          Korábbi lakhelyek: <input id="personEditPastPlace" name="personEditPastPlace" type="text" placeholder="Korábbi lakhely">
+        </div>
+        <div class="input-field col s12">
+          <input id="personEditEmail" type="email" value="{{person.email}}" placeholder="E-mail" class="validate">
+        </div>
+        <div class="input-field col s12">
+          <input id="personEditPassword" type="password" placeholder="Jelszó" class="validate">
+        </div>
+        <div class="input-field col s12">
+          <textarea id="personEditComment" class="materialize-textarea">{{person.comment}}</textarea>
+          <label for="personEditComment">Megjegyzés</label>
+        </div>
+      </div>
+    </div>
+    <button id="personEditSubmit" class="btn">{{button}}</button>
+  </form>
+</script>

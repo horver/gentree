@@ -1,0 +1,20 @@
+<div id="treePage" class="page" data-route="tree">
+  <div id="tree"></div>
+</div>
+<script  id="treeNode-template" type="text/x-handlebars-template">
+  <div id="node{{id}}" class="{{nodeClass}}">
+    {{textRenderer name extra textClass}}
+  </div>
+</script>
+<script  id="treeText-template" type="text/x-handlebars-template">
+  <div class="center-align">
+    <p class="{{textClass}}">
+      <a href="#/person/{{extra.id}}" class="nodeLink">{{name}}</a>
+      <a href="#/person-edit/{{extra.id}}" class="nodeLink"><i class="material-icons tiny">edit</i></a>
+      {{#ifNot extra.id}}
+      <a href="#/person-delete/{{extra.id}}" class="nodeLink"><i class="material-icons tiny">delete</i></a>
+      {{/ifNot}}
+    </p>
+    <span class="{{textClass}}">({{dateYear extra.born}} - {{dateYear extra.death}})</span>
+  </div>
+</script>

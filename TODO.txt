@@ -1,0 +1,5 @@
+- Házasságok szerkesztése
+- Személy listánál, név keresése
+- SQL adat generálók
+- dokumentáció
+optional: testek rendesen megírva

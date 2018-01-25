@@ -1,0 +1,109 @@
+
+ul.token-input-list-material {
+    overflow: hidden;
+    height: auto !important;
+    height: 1%;
+    cursor: text;
+    font-size: 1em;
+    min-height: 1px;
+    border-bottom: 1px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    clear: left;
+    white-space: nowrap;
+    z-index: 11001;
+    margin-left: 32px;
+}
+
+ul.token-input-list-material li input {
+    width: 100px;
+    -webkit-appearance: caret;
+    height: inherit;
+    z-index: 11001;
+}
+
+li.token-input-selected-token-material {
+    background-color: #7986CB;
+    color: #E8EAF6;
+    border: 1px solid #3F51B5;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+ul.token-input-list-material .chip {
+    float: left;
+}
+
+li.token-input-input-token-material {
+    float: left;
+    margin-left: 10px;
+    padding: 0;
+    list-style-type: none;
+    height: inherit;
+    z-index: 11001;
+}
+
+li.token-input-input-token-material input {
+    height: 100%;
+    z-index: 11001;
+}
+
+div.token-input-dropdown-material {
+    position: absolute;
+    background-color: #fff;
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: default;
+    font-size: 0.9em;
+    z-index: 11001; /*!!!*/
+}
+
+div.token-input-dropdown-material p {
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    color: #777;
+    z-index: 11001;
+}
+
+div.token-input-dropdown-material ul {
+    margin: 0;
+    padding: 0;
+    z-index: 11001;
+}
+
+div.token-input-dropdown-material ul li {
+    background-color: #fff;
+    padding: 3px;
+    margin: 0;
+    list-style-type: none;
+    z-index: 11001;
+}
+
+div.token-input-dropdown-material ul li.token-input-dropdown-item-material {
+    background-color: #fff;
+    z-index: 11001;
+}
+
+div.token-input-dropdown-material ul li.token-input-dropdown-item2-material {
+    background-color: #fff;
+    z-index: 11001;
+}
+
+div.token-input-dropdown-material ul li em {
+    font-weight: bold;
+    font-style: normal;
+    z-index: 11001;
+}
+
+div.token-input-dropdown-material ul li.token-input-selected-dropdown-item-material {
+    background-color: #fff;
+    color: #777;
+    font-weight: bold;
+    z-index: 11001;
+}

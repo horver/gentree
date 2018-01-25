@@ -1,0 +1,29 @@
+<div id="personListPage" class="container page" data-route="persons" style="display: none;"></div>
+<script  id="personListpage-template" type="text/x-handlebars-template">
+  <h2><i class="material-icons medium">{{icon}}</i>{{title}}</h2>
+  <table class="highlight striped">
+    <thead>
+      <th>Név</th>
+      <th>Születés</th>
+      <th>Halálozás</th>
+      <th>Gyerekek száma</th>
+      <th></th>
+    </thead>
+    <tbody>
+      {{#each persons as |person|}}
+      <tr data-id="{{person.id}}">
+        <td><a href="#/person/{{person.id}}">{{person.name}}</a></td>
+        <td>{{person.born}}</td>
+        <td>{{person.death}}</td>
+        <td>{{person.childNum}}</td>
+        <td>
+            <a href="#/person-edit/{{person.id}}" class="green-text text-lighten-2 tooltipped" data-tooltip="Szerkesztés"><i class="material-icons">edit</i></a>
+            {{#ifNot person.id}}
+            <a href="#/person-delete/{{person.id}}" class="red-text tooltipped" data-tooltip="Törlés"><i class="material-icons">delete</i></a>
+            {{/ifNot}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</script>

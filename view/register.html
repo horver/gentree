@@ -1,0 +1,44 @@
+<div id="registerPage" style="display: none;">
+  <div class="row">
+    <h1 class="center-align">Dzsendtri</h1>
+    <div class="card col s6 offset-s3 center-align">
+      <div class="card-content">
+        <span class="card-title">Regisztráció</span>
+        <div id="regResults"></div>
+        <script id="regerror-template" type="text/x-handlebars-template">
+          <div class="card-panel {{colour}} white-text">
+            <i class="material-icons">{{icon}}</i>
+            <strong>{{msg}}</strong>
+          </div>
+        </script>
+        <form id="regForm" class="col s12" method="post" data-toggle="validator">
+          <div class="row">
+            <div class="col s12">
+              <div class="input-field">
+                <input id="regName" type="text" placeholder="Teljes név" required>
+                <label for="regName"></label>
+              </div>
+              <div class="input-field">
+                <input id="regEmail" type="email" placeholder="E-mail" class="validate" required>
+                <label for="regEmail"></label>
+              </div>
+              <div class="input-field">
+                <input id="regPassword" type="password" placeholder="Jelszó" class="validate" required>
+                <label for="regPassword"></label>
+              </div>
+              <p>
+                <input name="regSex" value="0" type="radio" id="regMale" />
+                <label for="regMale">Férfi</label>
+                <input name="regSex" value="1" type="radio" id="regFemale" />
+                <label for="regFemale">Nő</label>
+              </p>
+              <button type="submit" class="btn">Regisztrálok</button>
+              <a id="toLogin" class="btn btn-flat">Vissza a bejelentkezéshez</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/components/register.js" defer></script>
